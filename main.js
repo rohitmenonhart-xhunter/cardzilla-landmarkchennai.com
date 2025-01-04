@@ -436,14 +436,14 @@ END:VCARD`;
 					youtubeIframe.style.display = 'block';
 					closeButton.style.display = 'block';
 					// Start video with autoplay
-					youtubeIframe.src = 'https://www.youtube.com/embed/-2CnCrz38F4?enablejsapi=1&autoplay=1&playsinline=1&controls=1';
+					youtubeIframe.src = 'https://www.youtube.com/embed/2WLd1zCVX9g?enablejsapi=1&autoplay=1&playsinline=1&controls=1';
 				} else {
 					youtubeIframe.style.display = 'none';
 					closeButton.style.display = 'none';
 					// Stop video completely
 					youtubeIframe.src = 'about:blank';
 					setTimeout(() => {
-						youtubeIframe.src = 'https://www.youtube.com/embed/-2CnCrz38F4?enablejsapi=1&autoplay=0&mute=1&playsinline=1&controls=1';
+						youtubeIframe.src = 'https://www.youtube.com/embed/2WLd1zCVX9g?enablejsapi=1&autoplay=0&mute=1&playsinline=1&controls=1';
 					}, 100);
 				}
 				return;
