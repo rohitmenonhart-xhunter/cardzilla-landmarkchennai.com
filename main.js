@@ -611,22 +611,21 @@ END:VCARD`;
 		
 		// Create YouTube iframe with enhanced options
 		const youtubeIframe = document.createElement('iframe');
-		youtubeIframe.width = '80vw';  // 80% of viewport width
-		youtubeIframe.height = '45vw';  // 16:9 aspect ratio (80 * 9/16 = 45)
-		youtubeIframe.src = 'https://www.youtube.com/embed/-2CnCrz38F4?enablejsapi=1&autoplay=0&mute=0&playsinline=1&controls=1';
+		youtubeIframe.width = '100%';  // Changed to be more responsive
+		youtubeIframe.height = '100%';  // Changed to be more responsive
+		youtubeIframe.src = 'https://www.youtube.com/embed/-2CnCrz38F4?enablejsapi=1&autoplay=0&mute=0&playsinline=1&controls=1&rel=0';
 		youtubeIframe.frameBorder = '0';
-		youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+		youtubeIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
+		youtubeIframe.allowFullscreen = true;
 		youtubeIframe.style.display = 'none';
 		youtubeIframe.style.position = 'fixed';
 		youtubeIframe.style.top = '50%';
 		youtubeIframe.style.left = '50%';
 		youtubeIframe.style.transform = 'translate(-50%, -50%)';
 		youtubeIframe.style.zIndex = '1000';
-		youtubeIframe.style.minHeight = '450px';  // Minimum height to ensure good size
-		youtubeIframe.style.minWidth = '800px';   // Minimum width to maintain ratio
-		youtubeIframe.style.maxWidth = '90vw';    // Maximum width
-		youtubeIframe.style.maxHeight = '80vh';   // Maximum height
-		youtubeIframe.style.aspectRatio = '16/9'; // Force 16:9 aspect ratio
+		youtubeIframe.style.width = '90vw';     // Changed to viewport width
+		youtubeIframe.style.height = '50.625vw'; // 16:9 aspect ratio (90 * 9/16)
+		youtubeIframe.style.maxHeight = '80vh';  // Maximum height relative to viewport
 		youtubeIframe.style.backgroundColor = 'black';
 		youtubeIframe.style.borderRadius = '12px';
 		youtubeIframe.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
